@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mhmsbmrapp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/karnatakalogo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        tools:replace="android:icon"
+        android:theme="@style/AppTheme">
+        <activity android:name=".DashboardBmr.MutalFundsFragment"></activity>
+        <activity android:name=".DashboardBmr.UlipFragment" />
+        <activity android:name=".DashboardBmr.TabFragment" />
+        <activity android:name=".DashboardBmr.SummaryFragment" />
+        <activity android:name=".DashboardBmr.Stocklist" />
+        <activity android:name=".DashboardBmr.StockFragment" />
+        <activity android:name=".DashboardBmr.SentFragment" />
+        <activity android:name=".DashboardBmr.MainActivity" />
+        <activity android:name=".Login.SelectMhe" />
+        <activity android:name=".Login.LoginBmr" />
+        <activity android:name=".Login.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

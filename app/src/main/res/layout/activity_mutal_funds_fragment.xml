@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardBmr.MutalFundsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Me!"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/button"/>
+
+    <ScrollView
+        android:layout_width="386dp"
+        android:layout_height="637dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="2dp">
+
+        <TextView
+            android:id="@+id/fetcheddata"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Fetched Text Here!!!"
+            android:padding="5dp"
+            android:textSize="24sp" />
+    </ScrollView>
+
+</RelativeLayout>
