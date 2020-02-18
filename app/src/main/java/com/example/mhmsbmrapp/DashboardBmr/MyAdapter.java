@@ -4,6 +4,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+
+import com.example.mhmsbmrapp.DashboardBmr.model.UlipFragment;
+
 import static com.example.mhmsbmrapp.DashboardBmr.TabFragment.int_items;
 
 public class MyAdapter extends FragmentPagerAdapter {
@@ -21,6 +24,8 @@ public class MyAdapter extends FragmentPagerAdapter {
                 return new IpDashboard();
             case 2:
                 return new MutalFundsFragment();
+            case 3:
+                return new UlipFragment();
 
 
         }
@@ -42,6 +47,8 @@ public class MyAdapter extends FragmentPagerAdapter {
                 return "In-Patient";
             case 2:
                 return "Mutual";
+            case 3:
+                return "Ulip";
 
 
         }

@@ -36,6 +36,6 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:id="@+id/image"
-        android:src="@drawable/user1"/>
+        android:src="@drawable/karnatakalogo"/>
 
 </RelativeLayout>
