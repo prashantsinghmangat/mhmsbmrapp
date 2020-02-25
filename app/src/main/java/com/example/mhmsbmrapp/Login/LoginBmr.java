@@ -69,7 +69,7 @@ public class LoginBmr extends AppCompatActivity {
         Info = (TextView) findViewById(R.id.tvInfo);
         Login = (Button) findViewById(R.id.btnLogin);
 
-        Info.setText("No of attempts remaining: 5");
+        Info.setText("5");
 
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,7 +88,7 @@ public class LoginBmr extends AppCompatActivity {
         } else {
             counter--;
 
-            Info.setText("No of attempts remaining: " + String.valueOf(counter));
+            Info.setText("" + String.valueOf(counter));
             Log.d("login not pass", "login  not pass");
 
             if (counter == 0) {
