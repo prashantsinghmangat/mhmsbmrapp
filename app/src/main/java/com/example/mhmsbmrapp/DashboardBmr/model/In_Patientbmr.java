@@ -10,20 +10,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ListView;
-import android.widget.Toast;
 
-import com.ami.fundapter.BindDictionary;
-import com.ami.fundapter.FunDapter;
-import com.ami.fundapter.extractors.StringExtractor;
-import com.example.mhmsbmrapp.DashboardBmr.uliplist;
 import com.example.mhmsbmrapp.R;
 
 import java.util.ArrayList;
 
 
-public class UlipFragment extends Fragment {
+public class In_Patientbmr extends Fragment {
 
 
 
@@ -33,18 +26,18 @@ public class UlipFragment extends Fragment {
 
     private static RecyclerView recyclerView;
 
-    public UlipFragment() {
+    public In_Patientbmr() {
     }
 
     @SuppressLint("ValidFragment")
-    public UlipFragment(String title) {
+    public In_Patientbmr(String title) {
         this.title = title;//Setting tab title
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.activity_ulip_fragment, container, false);
+        view = inflater.inflate(R.layout.ip_patientbmr_fragment, container, false);
 
         setRecyclerView();
         return view;

@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
-    <color name="colorPurple">#9C27B0</color>
+
+
+    <color name="colorPrimary">#813D7E</color>
+    <color name="colorPrimaryDark">#813D7E</color>
+    <color name="textColorPrimary">#0E0E0E</color>
+    <color name="windowBackground">#535252</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">#813D7E</color>
+    <color name="blue">#03A9F4</color>
+    <color name="colorPurple">#813D7E</color>
+    <color name="colorGrey">#A3A1A3</color>
+    <color name="colorDoctorName">#E4BFD7</color>
+
+
 </resources>

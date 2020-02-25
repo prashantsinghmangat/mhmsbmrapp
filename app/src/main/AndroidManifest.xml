@@ -12,18 +12,16 @@
         android:icon="@mipmap/karnatakalogo"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/karnatakalogo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
-        <activity android:name=".DashboardBmr.uliplist"></activity>
-        <activity android:name=".DashboardBmr.Anime" />
-        <activity android:name=".DashboardBmr.MutalFundsFragment" />
-        <activity android:name=".DashboardBmr.UlipFragment" />
+        <activity android:name=".DashboardBmr.Mutal.activity.Animeactivity"></activity>
         <activity android:name=".DashboardBmr.TabFragment" />
         <activity android:name=".DashboardBmr.SentFragment" />
         <activity android:name=".Login.SelectMhe" />
         <activity android:name=".Login.LoginBmr" />
+        <activity android:name=".Login.SplashScreen"/>
         <activity android:name=".DashboardBmr.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

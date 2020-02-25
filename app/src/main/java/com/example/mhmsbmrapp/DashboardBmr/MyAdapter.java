@@ -5,7 +5,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 
-import com.example.mhmsbmrapp.DashboardBmr.model.UlipFragment;
+import com.example.mhmsbmrapp.DashboardBmr.Mutal.activity.Out_Patientbmr;
+import com.example.mhmsbmrapp.DashboardBmr.model.In_Patientbmr;
 
 import static com.example.mhmsbmrapp.DashboardBmr.TabFragment.int_items;
 
@@ -19,13 +20,10 @@ public class MyAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position){
             case 0:
-                return new OpDashboard();
+                return new Out_Patientbmr();
             case 1:
-                return new IpDashboard();
-            case 2:
-                return new MutalFundsFragment();
-            case 3:
-                return new UlipFragment();
+                return new In_Patientbmr();
+
 
 
         }
@@ -45,10 +43,6 @@ public class MyAdapter extends FragmentPagerAdapter {
                 return "Out-Patient";
             case 1:
                 return "In-Patient";
-            case 2:
-                return "Mutual";
-            case 3:
-                return "Ulip";
 
 
         }

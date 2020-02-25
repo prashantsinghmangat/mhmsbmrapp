@@ -47,7 +47,7 @@ public class RecyclerView_Adapter extends RecyclerView.Adapter<DemoViewHolder> {
     @Override
     public DemoViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         LayoutInflater mInflater = LayoutInflater.from(viewGroup.getContext());
-        ViewGroup mainGroup = (ViewGroup) mInflater.inflate(R.layout.item_row, viewGroup, false);
+        ViewGroup mainGroup = (ViewGroup) mInflater.inflate(R.layout.ip_patientbmr_list, viewGroup, false);
         DemoViewHolder mainHolder = new DemoViewHolder(mainGroup) {
             @Override
             public String toString() {

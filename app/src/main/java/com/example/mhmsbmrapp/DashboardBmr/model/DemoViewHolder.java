@@ -8,9 +8,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mhmsbmrapp.R;
 
-/**
- * Created by SONU on 31/08/15.
- */
 public abstract class DemoViewHolder extends RecyclerView.ViewHolder {
 
 
