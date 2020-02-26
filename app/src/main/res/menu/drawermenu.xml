@@ -14,30 +14,30 @@
         <menu>
             <item
             android:title="About KMHMS"
-            android:icon="@drawable/spam"/>
+            />
             <item
                 android:title="FAQs"
-                android:icon="@drawable/bin"/>
+                />
             <item
                 android:title="Useful Links"
-                android:icon="@drawable/spam"/>
+                />
             <item
                 android:title="Downloads"
-                android:icon="@drawable/bin"/>
+                />
             <item
                 android:title="Contact Us"
-                android:icon="@drawable/bin"/>
+                />
         </menu>
     </item>
 
     <group android:id="@+id/group_settings_id">
 
         <item android:title="Settings"
-            android:icon="@drawable/settings"/>
+            />
         <item android:title="Help"
-            android:icon="@drawable/help"/>
+            />
         <item android:title="Select Another MHE"
-            android:icon="@drawable/help"/>
+            />
     </group>
 
 

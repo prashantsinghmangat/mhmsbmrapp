@@ -16,7 +16,7 @@ public class Animeactivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_anime);
+        setContentView(R.layout.animeactivitytest);
 
         // hide the default actionbar
 
@@ -47,7 +47,7 @@ public class Animeactivity extends AppCompatActivity {
         tv_name.setText(name);
         tv_categorie.setText(category);
         tv_description.setText(description);
-        tv_rating.setText(rating);
+//        tv_rating.setText(rating);
         tv_studio.setText(studio);
 
         collapsingToolbarLayout.setTitle(name);
@@ -57,7 +57,7 @@ public class Animeactivity extends AppCompatActivity {
 
 
         // set image using Glide
-        Glide.with(this).load(image_url).apply(requestOptions).into(img);
+        //Glide.with(this).load(image_url).apply(requestOptions).into(img);
 
 
 
