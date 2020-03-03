@@ -16,12 +16,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
-        <activity android:name=".DashboardBmr.Mutal.activity.Animeactivity"></activity>
+        <activity android:name=".DashboardBmr.Mutal.activity.nextactivity"></activity>
+        <activity android:name=".DashboardBmr.Mutal.activity.Animeactivity" />
         <activity android:name=".DashboardBmr.TabFragment" />
         <activity android:name=".DashboardBmr.SentFragment" />
         <activity android:name=".Login.SelectMhe" />
         <activity android:name=".Login.LoginBmr" />
-        <activity android:name=".Login.SplashScreen"/>
+        <activity android:name=".Login.SplashScreen" />
         <activity android:name=".DashboardBmr.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

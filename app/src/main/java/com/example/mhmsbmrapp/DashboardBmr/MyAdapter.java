@@ -10,7 +10,7 @@ import com.example.mhmsbmrapp.DashboardBmr.model.In_Patientbmr;
 
 import static com.example.mhmsbmrapp.DashboardBmr.TabFragment.int_items;
 
-public class MyAdapter extends FragmentPagerAdapter {
+public class    MyAdapter extends FragmentPagerAdapter {
 
     public MyAdapter(FragmentManager fm)
     {

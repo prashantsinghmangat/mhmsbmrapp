@@ -19,7 +19,7 @@
             android:layout_height="match_parent"
             android:id="@+id/collapsingtoolbar_id"
             app:layout_scrollFlags="exitUntilCollapsed|scroll"
-            app:title="Anime Title"
+            app:title="Patient Name"
             app:contentScrim="?attr/colorPrimary"
             app:expandedTitleMarginStart="48dp"
             app:expandedTitleMarginEnd="64dp"
@@ -221,12 +221,6 @@
                             android:layout_marginTop="5dp">
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="Address"
-                                android:textColor="#AAAAAA"></TextView>
-                            <TextView
                                 android:id="@+id/aa_studio"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -278,6 +272,13 @@
                         android:textColor="@color/colorPrimaryDark"
                         android:layout_marginTop="5dp"
                         />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Address"
+                            android:textColor="#AAAAAA"></TextView>
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -298,83 +299,68 @@
         android:padding="16dp">
 
         <RelativeLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:textColor="#101010"
-                android:text="Anime Description"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/aa_description"/>
-            <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="OP BMR"
-                android:textColor="#000000"
-                android:gravity="center">
-            </TextView>
-        </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="70dp">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Assessment"
-                    android:textColor="#000000"
-                    android:gravity="center">
-                </TextView>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="120dp">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Therapy"
-                    android:textColor="#000000"
-                    android:gravity="center">
-                </TextView>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="170dp">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Restraint Monitoring"
-                    android:textColor="#000000"
-                    android:gravity="center">
-                </TextView>
-            </androidx.cardview.widget.CardView>
+            android:layout_height="match_parent">
 
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabs"
-                app:tabGravity="fill"
-                app:tabMode="fixed"
-                android:background="#FAF7F7"
-                app:tabIndicatorColor="#813D7E"
-                app:tabSelectedTextColor="#813D7E"
-                app:tabTextColor="#333232"
-                android:layout_marginTop="210dp"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            </com.google.android.material.tabs.TabLayout>
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textTitle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/btnNavFrag1"
+                    android:text="OP-BMR"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnNavFrag1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/btnNavFrag2"
+                    android:text="Assessment"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:gravity="center">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/btnNavFrag3"
+                    android:text="Therapy"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnNavFrag3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/btnNavSecondActivity"
+                    android:text="Restraint Monitoring"/>
+
+            </LinearLayout>
 
             <androidx.viewpager.widget.ViewPager
-                android:id="@+id/viewpager"
                 android:layout_width="match_parent"
                 android:layout_height="700dp"
-                android:layout_marginTop="210dp">
+                android:layout_marginTop="130dp"
+                android:id="@+id/containter">
 
             </androidx.viewpager.widget.ViewPager>
+
+
+
+
         </RelativeLayout>
 
 

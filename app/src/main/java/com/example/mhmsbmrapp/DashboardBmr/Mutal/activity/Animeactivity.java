@@ -1,24 +1,39 @@
 package com.example.mhmsbmrapp.DashboardBmr.Mutal.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
-import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.mhmsbmrapp.DashboardBmr.Mutal.activity.TabViewPatientDetails.Fragment1;
 import com.example.mhmsbmrapp.R;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 
 public class Animeactivity extends AppCompatActivity {
+
+
+    private Button btnNavFrag1;
+    private Button btnNavFrag2;
+    private Button btnNavFrag3;
+    private Button btnNavSecondActivity;
+
+    private SectionsStatePagerAdapter mSectionsStatePagerAdapter;
+    private ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.animeactivitytest);
 
-        // hide the default actionbar
+
+
+    // hide the default actionbar
 
         // Recieve data
 
@@ -46,7 +61,7 @@ public class Animeactivity extends AppCompatActivity {
 
         tv_name.setText(name);
         tv_categorie.setText(category);
-        tv_description.setText(description);
+//        tv_description.setText(description);
 //        tv_rating.setText(rating);
         tv_studio.setText(studio);
 
@@ -60,8 +75,59 @@ public class Animeactivity extends AppCompatActivity {
         //Glide.with(this).load(image_url).apply(requestOptions).into(img);
 
 
+        //navbar for op-bmr buttons
+        btnNavFrag1 = (Button) findViewById(R.id.btnNavFrag1);
+        btnNavFrag2 = (Button) findViewById(R.id.btnNavFrag2);
+        btnNavFrag3 = (Button) findViewById(R.id.btnNavFrag3);
+        btnNavSecondActivity = (Button) findViewById(R.id.btnNavSecondActivity);
 
+        btnNavFrag1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                (Animeactivity.this).setViewPager(0);
+            }
+        });
+
+        btnNavFrag2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                (Animeactivity.this).setViewPager(1);
+            }
+        });
+
+        btnNavFrag3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                (Animeactivity.this).setViewPager(2);
+            }
+        });
+
+        btnNavSecondActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Animeactivity.this, nextactivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mSectionsStatePagerAdapter = new SectionsStatePagerAdapter(getSupportFragmentManager());
+
+        mViewPager = (ViewPager) findViewById(R.id.containter);
+        //setup the pager
+        setupViewPager(mViewPager);
+
+    }
+
+    private void setupViewPager(ViewPager viewPager) {
+        SectionsStatePagerAdapter adapter = new SectionsStatePagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(new Fragment1(), "Fragment1");
+        adapter.addFragment(new Fragment2(), "Fragment2");
+        adapter.addFragment(new Fragment3(), "Fragment3");
+        viewPager.setAdapter(adapter);
+    }
+    public void setViewPager(int fragmentNumber){
+        mViewPager.setCurrentItem(fragmentNumber);
+    }
 
 
     }
-}
