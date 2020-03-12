@@ -13,13 +13,36 @@ import com.example.mhmsbmrapp.R;
 import com.google.android.material.tabs.TabLayout;
 
 public class Fragment1 extends Fragment {
-    private static final String TAG = "Fragment1";
+    public  static TabLayout tabLayout;
+    public  static ViewPager viewPager;
+    public  static int int_items= 2;
 
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable final Bundle savedInstanceState) {
-        View view  = inflater.inflate(R.layout.fragment2_layout, container, false);
 
-        return view;
+
+    public Fragment1() {
+        // Required empty public constructor
     }
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+
+        View v = inflater.inflate(R.layout.fragment1_layout,null);
+        tabLayout=(TabLayout)v.findViewById(R.id.tabs);
+        viewPager=(ViewPager)v.findViewById(R.id.viewpager);
+        //set an adpater
+
+        viewPager.setAdapter(new MyNewAdapter( getChildFragmentManager()));
+
+        tabLayout.post(new Runnable() {
+            @Override
+            public void run() {
+                tabLayout.setupWithViewPager(viewPager);
+            }
+        });
+        return v;
+    }
+
 }
