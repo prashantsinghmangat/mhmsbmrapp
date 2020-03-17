@@ -1,11 +1,10 @@
-package com.example.mhmsbmrapp.DashboardBmr.Mutal.activity.TabViewPatientDetails;
+package com.example.mhmsbmrapp.DashboardBmr.Mutal.activity.OpBmrTab;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
@@ -14,7 +13,7 @@ import com.google.android.material.tabs.TabLayout;
 
 public class Fragment1 extends Fragment {
     public  static TabLayout tabLayout;
-    public  static ViewPager viewPager;
+    public  static ViewPager opviewPager;
     public  static int int_items= 2;
 
 
@@ -31,15 +30,15 @@ public class Fragment1 extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment1_layout,null);
         tabLayout=(TabLayout)v.findViewById(R.id.tabs);
-        viewPager=(ViewPager)v.findViewById(R.id.viewpager);
+        opviewPager=(ViewPager)v.findViewById(R.id.opviewpager);
         //set an adpater
 
-        viewPager.setAdapter(new MyNewAdapter( getChildFragmentManager()));
+        opviewPager.setAdapter(new MyAdapter( getChildFragmentManager()));
 
         tabLayout.post(new Runnable() {
             @Override
             public void run() {
-                tabLayout.setupWithViewPager(viewPager);
+                tabLayout.setupWithViewPager(opviewPager);
             }
         });
         return v;

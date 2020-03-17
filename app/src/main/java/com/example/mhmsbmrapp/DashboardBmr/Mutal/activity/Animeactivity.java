@@ -11,7 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.bumptech.glide.request.RequestOptions;
-import com.example.mhmsbmrapp.DashboardBmr.Mutal.activity.TabViewPatientDetails.Fragment1;
+import com.example.mhmsbmrapp.DashboardBmr.Mutal.activity.OpAssessement.Fragment2;
+import com.example.mhmsbmrapp.DashboardBmr.Mutal.activity.OpBmrTab.Fragment1;
 import com.example.mhmsbmrapp.R;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 

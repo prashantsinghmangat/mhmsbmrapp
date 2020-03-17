@@ -4,7 +4,9 @@
     android:orientation="vertical"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".DashboardBmr.Mutal.activity.TabViewPatientDetails.Fragment1">
+    tools:context=".DashboardBmr.Mutal.activity.OpBmrTab.Fragment1">
+
+    <!-- TODO: Update blank fragment layout -->
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -21,7 +23,7 @@
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewpager"
+        android:id="@+id/opviewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

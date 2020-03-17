@@ -1,4 +1,4 @@
-package com.example.mhmsbmrapp.DashboardBmr.Mutal.activity;
+package com.example.mhmsbmrapp.DashboardBmr.Mutal.activity.OpBmrTab;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,14 +10,17 @@ import androidx.fragment.app.Fragment;
 
 import com.example.mhmsbmrapp.R;
 
-public class Fragment2 extends Fragment {
+
+public class FragmentOP extends Fragment {
     private static final String TAG = "Fragment1";
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable final Bundle savedInstanceState) {
-        View view  = inflater.inflate(R.layout.fragment2_layout, container, false);
+        View view  = inflater.inflate(R.layout.opbmrmain1, container, false);
 
         return view;
     }
 }
+
+
