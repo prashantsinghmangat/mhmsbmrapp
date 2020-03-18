@@ -5,8 +5,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 
-import com.example.mhmsbmrapp.DashboardBmr.Mutal.activity.Out_Patientbmr;
-import com.example.mhmsbmrapp.DashboardBmr.model.In_Patientbmr;
+import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.Out_Patientbmr;
+import com.example.mhmsbmrapp.DashboardBmr.In_Patient_Dashboard.In_Patientbmr;
 
 import static com.example.mhmsbmrapp.DashboardBmr.TabFragment.int_items;
 

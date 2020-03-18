@@ -1,4 +1,4 @@
-package com.example.mhmsbmrapp.DashboardBmr.Mutal.activity;
+package com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,8 +11,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.bumptech.glide.request.RequestOptions;
-import com.example.mhmsbmrapp.DashboardBmr.Mutal.activity.OpAssessement.Fragment2;
-import com.example.mhmsbmrapp.DashboardBmr.Mutal.activity.OpBmrTab.Fragment1;
+import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.OpAssessement.Fragment2;
+import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.OpBmrTab.Fragment1;
+import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.OpTherapy.Fragment3;
 import com.example.mhmsbmrapp.R;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 

@@ -16,8 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
-        <activity android:name=".DashboardBmr.Mutal.activity.nextactivity"></activity>
-        <activity android:name=".DashboardBmr.Mutal.activity.Animeactivity" />
+        <activity android:name=".DashboardBmr.Out_Patient_Dashboard.activity.nextactivity"></activity>
+        <activity android:name=".DashboardBmr.Out_Patient_Dashboard.activity.Animeactivity" />
+        <activity android:name=".AddPatientFolder.AddPatients" />
         <activity android:name=".DashboardBmr.TabFragment" />
         <activity android:name=".DashboardBmr.SentFragment" />
         <activity android:name=".Login.SelectMhe" />

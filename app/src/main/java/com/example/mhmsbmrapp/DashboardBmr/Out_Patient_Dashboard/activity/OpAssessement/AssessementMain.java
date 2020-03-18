@@ -1,4 +1,4 @@
-package com.example.mhmsbmrapp.DashboardBmr.Mutal.activity.OpBmrTab;
+package com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.OpAssessement;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,15 +10,15 @@ import androidx.fragment.app.Fragment;
 
 import com.example.mhmsbmrapp.R;
 
-public class FragmenOphistory extends Fragment {
-    private static final String TAG = "Fragment1";
+public class AssessementMain extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable final Bundle savedInstanceState) {
-        View view  = inflater.inflate(R.layout.op_history, container, false);
+        View view  = inflater.inflate(R.layout.opassessementmain, container, false);
 
         return view;
     }
 }
+
 

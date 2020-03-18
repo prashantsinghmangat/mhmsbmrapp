@@ -1,4 +1,4 @@
-package com.example.mhmsbmrapp.DashboardBmr.model;
+package com.example.mhmsbmrapp.DashboardBmr.In_Patient_Dashboard;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,9 +10,6 @@ import com.example.mhmsbmrapp.R;
 
 import java.util.ArrayList;
 
-/**
- * Created by SONU on 10/09/15.
- */
 public class RecyclerView_Adapter extends RecyclerView.Adapter<DemoViewHolder> {
 
     private ArrayList<String> arrayList;

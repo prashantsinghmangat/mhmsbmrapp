@@ -1,4 +1,4 @@
-package com.example.mhmsbmrapp.DashboardBmr.model;
+package com.example.mhmsbmrapp.DashboardBmr.In_Patient_Dashboard;
 
 
 import android.view.View;

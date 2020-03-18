@@ -1,25 +1,26 @@
-package com.example.mhmsbmrapp.DashboardBmr.Mutal.activity.OpAssessement;
+package com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.OpBmrTab;
+
 
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import static com.example.mhmsbmrapp.DashboardBmr.Mutal.activity.OpAssessement.Fragment2.int_items;
+import static com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.OpBmrTab.Fragment1.int_items;
 
-public class AssessementAdapter extends FragmentPagerAdapter {
+public class MyAdapter extends FragmentPagerAdapter {
 
-    int tabCount1;
+    int tabCount;
 
 
     //Constructor to the class
-    public AssessementAdapter(FragmentManager fm, int tabCount) {
+    public MyAdapter(FragmentManager fm, int tabCount) {
         super(fm);
         //Initializing tab count
-        this.tabCount1 = tabCount;
+        this.tabCount = tabCount;
     }
 
-    public AssessementAdapter(FragmentManager fm) {
+    public MyAdapter(FragmentManager fm) {
         super(fm);
     }
 
@@ -27,9 +28,9 @@ public class AssessementAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new AssessementMain();
+                return new FragmentOP();
             case 1:
-                return new AssessementHistory();
+                return new FragmenOphistory();
 
         }
         return null;
@@ -46,9 +47,9 @@ public class AssessementAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position){
         switch (position){
             case 0:
-                return "Assessement";
+                return "OP-BMR";
             case 1:
-                return "Assessementhistory";
+                return "OP-BMR History";
 
 
         }

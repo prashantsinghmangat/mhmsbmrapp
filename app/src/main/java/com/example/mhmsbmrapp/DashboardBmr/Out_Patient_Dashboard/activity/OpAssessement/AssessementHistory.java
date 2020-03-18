@@ -1,4 +1,4 @@
-package com.example.mhmsbmrapp.DashboardBmr.Mutal.activity.OpAssessement;
+package com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.OpAssessement;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

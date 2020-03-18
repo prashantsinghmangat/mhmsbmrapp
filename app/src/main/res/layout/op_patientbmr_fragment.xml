@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DashboardBmr.Mutal.activity.Out_Patientbmr"
+    tools:context=".DashboardBmr.Out_Patient_Dashboard.activity.Out_Patientbmr"
     android:background="#F4F1F5">
 
 
@@ -51,12 +51,13 @@
         </ImageView>
 
         <TextView
-            android:id="@+id/TextPatient"
+            android:id="@+id/AddPatient"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
             android:layout_marginRight="16dp"
             android:layout_weight="0"
+            android:clickable="true"
             android:text="Patient"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="18dp"

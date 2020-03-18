@@ -1,4 +1,4 @@
-package com.example.mhmsbmrapp.DashboardBmr.Mutal.activity.OpBmrTab;
+package com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.OpAssessement;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,14 +11,15 @@ import androidx.viewpager.widget.ViewPager;
 import com.example.mhmsbmrapp.R;
 import com.google.android.material.tabs.TabLayout;
 
-public class Fragment1 extends Fragment {
-    public  static TabLayout tabLayout;
-    public  static ViewPager opviewPager;
+public class Fragment2 extends Fragment {
+    private static final String TAG = "Fragment2";
+    public  static TabLayout tabLayout1;
+    public  static ViewPager viewPager1;
     public  static int int_items= 2;
 
 
 
-    public Fragment1() {
+    public Fragment2() {
         // Required empty public constructor
     }
 
@@ -28,17 +29,17 @@ public class Fragment1 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View v = inflater.inflate(R.layout.fragment1_layout,null);
-        tabLayout=(TabLayout)v.findViewById(R.id.tabs);
-        opviewPager=(ViewPager)v.findViewById(R.id.opviewpager);
+        View v = inflater.inflate(R.layout.fragment2_layout,null);
+        tabLayout1=(TabLayout)v.findViewById(R.id.assessementtabs);
+        viewPager1=(ViewPager)v.findViewById(R.id.viewpager1);
         //set an adpater
 
-        opviewPager.setAdapter(new MyAdapter( getChildFragmentManager()));
+        viewPager1.setAdapter(new AssessementAdapter(getChildFragmentManager()));
 
-        tabLayout.post(new Runnable() {
+        tabLayout1.post(new Runnable() {
             @Override
             public void run() {
-                tabLayout.setupWithViewPager(opviewPager);
+                tabLayout1.setupWithViewPager(viewPager1);
             }
         });
         return v;

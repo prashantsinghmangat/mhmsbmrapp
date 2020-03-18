@@ -1,4 +1,4 @@
-package com.example.mhmsbmrapp.DashboardBmr.Mutal.model;
+package com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.model;
 
 public class Anime {
 

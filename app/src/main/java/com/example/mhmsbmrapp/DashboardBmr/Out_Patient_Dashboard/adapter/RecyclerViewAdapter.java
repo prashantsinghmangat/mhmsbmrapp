@@ -1,4 +1,4 @@
-package com.example.mhmsbmrapp.DashboardBmr.Mutal.adapter;
+package com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,10 +12,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.example.mhmsbmrapp.DashboardBmr.Mutal.activity.Animeactivity;
-import com.example.mhmsbmrapp.DashboardBmr.Mutal.model.Anime;
+import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.Animeactivity;
+import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.model.Anime;
 import com.example.mhmsbmrapp.R;
 
 import java.util.List;

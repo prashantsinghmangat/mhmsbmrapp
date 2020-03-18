@@ -1,4 +1,4 @@
-package com.example.mhmsbmrapp.DashboardBmr.Mutal.activity;
+package com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
