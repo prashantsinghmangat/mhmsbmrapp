@@ -51,6 +51,7 @@ import com.example.mhmsbmrapp.R;
 
 public class LoginBmr extends AppCompatActivity {
 
+
     TextView testView;
     private EditText Name;
     private EditText Password;

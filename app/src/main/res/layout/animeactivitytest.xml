@@ -305,21 +305,23 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center">
+                android:layout_height="wrap_content">
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/textTitle"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:id="@+id/btnNavFrag1"
+                    android:background="@drawable/border_style"
                     android:text="OP-BMR"/>
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
                     android:layout_below="@+id/btnNavFrag1"
                     android:layout_centerHorizontal="true"
+                    android:background="@drawable/border_style"
                     android:layout_marginTop="10dp"
                     android:id="@+id/btnNavFrag2"
                     android:text="Assessment"/>
@@ -328,24 +330,24 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
-                android:gravity="center">
+                android:layout_height="60dp"
+                android:layout_marginTop="80dp">
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_style"
                     android:id="@+id/btnNavFrag3"
                     android:text="Therapy"/>
 
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/btnNavFrag3"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_style"
                     android:id="@+id/btnNavSecondActivity"
+                    android:layout_marginLeft="20dp"
                     android:text="Restraint Monitoring"/>
 
             </LinearLayout>
@@ -353,7 +355,7 @@
             <androidx.viewpager.widget.ViewPager
                 android:layout_width="match_parent"
                 android:layout_height="700dp"
-                android:layout_marginTop="130dp"
+                android:layout_marginTop="150dp"
                 android:id="@+id/containter">
 
             </androidx.viewpager.widget.ViewPager>

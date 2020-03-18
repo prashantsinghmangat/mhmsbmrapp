@@ -14,6 +14,7 @@
         <menu>
             <item
             android:title="About KMHMS"
+                android:id="@+id/nav_item_aboutkmhms"
             />
             <item
                 android:title="FAQs"
@@ -37,6 +38,7 @@
         <item android:title="Help"
             />
         <item android:title="Select Another MHE"
+            android:id="@+id/nav_item_sent1"
             />
     </group>
 

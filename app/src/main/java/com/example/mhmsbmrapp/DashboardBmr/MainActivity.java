@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
-        navigationView= (NavigationView) findViewById(R.id.shitstuff);
+        navigationView= (NavigationView) findViewById(R.id.sidenavigation);
 
         FM= getSupportFragmentManager();
         FT= FM.beginTransaction();
@@ -44,6 +44,15 @@ public class MainActivity extends AppCompatActivity {
                 if (item.getItemId()== R.id.nav_item_sent) {
                     FragmentTransaction fragmentTransaction= FM.beginTransaction();
                     fragmentTransaction.replace(R.id.containerView, new SentFragment()).commit();
+                }
+
+                if (item.getItemId()== R.id.nav_item_sent1) {
+                    FragmentTransaction fragmentTransaction= FM.beginTransaction();
+                    fragmentTransaction.replace(R.id.containerView, new Select_Another_MHE()).commit();
+                }
+                if (item.getItemId()== R.id.nav_item_aboutkmhms) {
+                    FragmentTransaction fragmentTransaction= FM.beginTransaction();
+                    fragmentTransaction.replace(R.id.containerView, new About_kmhms()).commit();
                 }
 
                 if (item.getItemId()==R.id.nav_item_inbox)
