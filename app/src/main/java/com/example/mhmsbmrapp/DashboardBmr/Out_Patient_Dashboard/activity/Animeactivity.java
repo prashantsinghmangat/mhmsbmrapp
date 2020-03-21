@@ -14,6 +14,7 @@ import com.bumptech.glide.request.RequestOptions;
 import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.OpAssessement.Fragment2;
 import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.OpBmrTab.Fragment1;
 import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.OpTherapy.Fragment3;
+import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.OpRestraintMonitoring.Fragment4;
 import com.example.mhmsbmrapp.R;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 
@@ -23,7 +24,8 @@ public class Animeactivity extends AppCompatActivity {
     private Button btnNavFrag1;
     private Button btnNavFrag2;
     private Button btnNavFrag3;
-    private Button btnNavSecondActivity;
+    private Button btnNavFrag4;
+    //private Button btnNavSecondActivity;
 
     private SectionsStatePagerAdapter mSectionsStatePagerAdapter;
     private ViewPager mViewPager;
@@ -81,7 +83,8 @@ public class Animeactivity extends AppCompatActivity {
         btnNavFrag1 = (Button) findViewById(R.id.btnNavFrag1);
         btnNavFrag2 = (Button) findViewById(R.id.btnNavFrag2);
         btnNavFrag3 = (Button) findViewById(R.id.btnNavFrag3);
-        btnNavSecondActivity = (Button) findViewById(R.id.btnNavSecondActivity);
+        btnNavFrag4 = (Button) findViewById(R.id.btnNavFrag4);
+        //btnNavSecondActivity = (Button) findViewById(R.id.btnNavSecondActivity);
 
         btnNavFrag1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,14 +106,20 @@ public class Animeactivity extends AppCompatActivity {
                 (Animeactivity.this).setViewPager(2);
             }
         });
+        btnNavFrag4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                (Animeactivity.this).setViewPager(3);
+            }
+        });
 
-        btnNavSecondActivity.setOnClickListener(new View.OnClickListener() {
+        /*btnNavSecondActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Animeactivity.this, nextactivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
         mSectionsStatePagerAdapter = new SectionsStatePagerAdapter(getSupportFragmentManager());
 
@@ -125,6 +134,7 @@ public class Animeactivity extends AppCompatActivity {
         adapter.addFragment(new Fragment1(), "Fragment1");
         adapter.addFragment(new Fragment2(), "Fragment2");
         adapter.addFragment(new Fragment3(), "Fragment3");
+        adapter.addFragment(new Fragment4(), "Fragment4");
         viewPager.setAdapter(adapter);
     }
     public void setViewPager(int fragmentNumber){

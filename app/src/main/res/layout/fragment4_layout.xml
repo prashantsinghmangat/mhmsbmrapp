@@ -4,12 +4,12 @@
     android:orientation="vertical"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".DashboardBmr.Out_Patient_Dashboard.activity.OpTherapy.Fragment3">
+    tools:context=".DashboardBmr.Out_Patient_Dashboard.activity.OpRestraintMonitoring.Fragment4">
 
     <!-- TODO: Update blank fragment layout -->
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/therapytabs"
+        android:id="@+id/Restrainttabs"
         app:tabGravity="fill"
         app:tabMode="fixed"
         android:background="#FAF7F7"
@@ -21,7 +21,7 @@
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/therapyviewpager"
+        android:id="@+id/Restraintviewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

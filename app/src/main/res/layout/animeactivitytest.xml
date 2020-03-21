@@ -346,7 +346,7 @@
                     android:layout_below="@+id/btnNavFrag3"
                     android:layout_centerHorizontal="true"
                     android:background="@drawable/border_style"
-                    android:id="@+id/btnNavSecondActivity"
+                    android:id="@+id/btnNavFrag4"
                     android:layout_marginLeft="20dp"
                     android:text="Restraint Monitoring"/>
 
