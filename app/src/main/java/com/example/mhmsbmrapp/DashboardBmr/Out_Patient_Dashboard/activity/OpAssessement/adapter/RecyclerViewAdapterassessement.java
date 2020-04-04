@@ -1,4 +1,4 @@
-package com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.OpRestraintMonitoring.adapter;
+package com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.OpAssessement.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,19 +14,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.request.RequestOptions;
 import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.Animeactivity;
-import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.model.Anime;
+import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.OpAssessement.model.AnimeOpAssessement;
 import com.example.mhmsbmrapp.R;
 
 import java.util.List;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
+public class RecyclerViewAdapterassessement extends RecyclerView.Adapter<RecyclerViewAdapterassessement.MyViewHolder> {
 
     private Context mContext ;
-    private List<Anime> mData ;
+    private List<AnimeOpAssessement> mData ;
     RequestOptions option;
 
 
-    public RecyclerViewAdapter(Context mContext, List<Anime> mData) {
+    public RecyclerViewAdapterassessement(Context mContext, List<AnimeOpAssessement> mData) {
         this.mContext = mContext;
         this.mData = mData;
 

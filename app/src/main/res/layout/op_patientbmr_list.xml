@@ -57,7 +57,7 @@
             <TextView
                 android:layout_width="129dp"
                 android:layout_height="wrap_content"
-                android:text="City"></TextView>
+                android:text="Email"></TextView>
 
         </LinearLayout>
         <LinearLayout
@@ -77,17 +77,13 @@
                 android:text="9457182128"></TextView>
 
             <TextView
-                android:id="@+id/CityPatient"
+                android:id="@+id/rating"
+                android:autoSizeTextType="uniform"
                 android:layout_width="129dp"
                 android:layout_height="wrap_content"
                 android:text="Bangalore"></TextView>
 
         </LinearLayout>
-
-
-
-
-
 
 
         <!--<TextView
@@ -118,9 +114,6 @@
                 android:id="@+id/studio"/>
 
         </LinearLayout>
-
-
-
 
 
     </LinearLayout>

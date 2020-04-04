@@ -19,9 +19,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.mhmsbmrapp.AddPatientFolder.AddPatients;
-import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.adapter.RecyclerViewAdapter;
-import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.model.Anime;
+
+
+import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.OpTherapy.adapter.RecyclerViewAdapterOpTherapy;
+import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.OpTherapy.model.AnimeOpTherapy;
 import com.example.mhmsbmrapp.R;
 
 import org.json.JSONArray;
@@ -40,7 +41,7 @@ public class OpTherapyHistory extends Fragment {
     private final String JSON_URL = "https://gist.githubusercontent.com/aws1994/f583d54e5af8e56173492d3f60dd5ebf/raw/c7796ba51d5a0d37fc756cf0fd14e54434c547bc/anime.json" ;
     private JsonArrayRequest request ;
     private RequestQueue requestQueue ;
-    private List<Anime> lstAnime ;
+    private List<AnimeOpTherapy> lstAnimeOpTherapy ;
     private RecyclerView recyclerView ;
 
     public OpTherapyHistory() {
@@ -55,7 +56,7 @@ public class OpTherapyHistory extends Fragment {
 
 
 
-        lstAnime = new ArrayList<>() ;
+        lstAnimeOpTherapy = new ArrayList<>() ;
         recyclerView = v.findViewById(R.id.recyclerviewid);
         jsonrequest();
 
@@ -77,7 +78,7 @@ public class OpTherapyHistory extends Fragment {
 
                     try {
                         jsonObject = response.getJSONObject(i) ;
-                        Anime anime = new Anime() ;
+                        AnimeOpTherapy anime = new AnimeOpTherapy() ;
                         anime.setName(jsonObject.getString("name"));
                         anime.setDescription(jsonObject.getString("description"));
                         anime.setRating(jsonObject.getString("Rating"));
@@ -85,7 +86,7 @@ public class OpTherapyHistory extends Fragment {
                         anime.setNb_episode(jsonObject.getInt("episode"));
                         anime.setStudio(jsonObject.getString("studio"));
                         anime.setImage_url(jsonObject.getString("img"));
-                        lstAnime.add(anime);
+                        lstAnimeOpTherapy.add(anime);
 
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -94,7 +95,7 @@ public class OpTherapyHistory extends Fragment {
 
                 }
 
-                setuprecyclerview(lstAnime);
+                setuprecyclerview(lstAnimeOpTherapy);
 
             }
         }, new Response.ErrorListener() {
@@ -111,10 +112,10 @@ public class OpTherapyHistory extends Fragment {
 
     }
 
-    private void setuprecyclerview(List<Anime> lstAnime) {
+    private void setuprecyclerview(List<AnimeOpTherapy> lstAnime) {
 
 
-        RecyclerViewAdapter myadapter = new RecyclerViewAdapter(getActivity(),lstAnime) ;
+        RecyclerViewAdapterOpTherapy myadapter = new RecyclerViewAdapterOpTherapy(getActivity(),lstAnime) ;
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(myadapter);
 

@@ -48,15 +48,20 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/loading_shape"
                     android:id="@+id/aa_thumbnail"/>-->
+
                 <androidx.cardview.widget.CardView
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
                     android:layout_height="400dp"
+                    card_view:cardCornerRadius="10dp"
+                    card_view:cardElevation="5dp"
                     android:background="@drawable/border_grey"
                     >
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="400dp"
+                        android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:layout_margin="8dp">
 
@@ -105,6 +110,8 @@
                             <TextView
                                 android:id="@+id/aa_categorie"
                                 android:layout_width="129dp"
+                                app:autoSizeTextType="uniform"
+                                tools:ignore="MissingPrefix"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="KA-01-2019-000021"
@@ -162,6 +169,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="Father's/ Mother's Name"
+                                app:autoSizeTextType="uniform"
                                 android:textColor="#AAAAAA"></TextView>
 
 
@@ -209,6 +217,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:id="@+id/aa_rating"
                                 android:layout_weight="1"
                                 android:text="akash.solanki@iiitb.ac.in"
                                 android:textColor="#000000"></TextView>
@@ -244,6 +253,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:id="@+id/aa_description"
                                 android:layout_weight="1"
                                 android:text="Yes"
                                 android:textColor="#000000"></TextView>
@@ -305,24 +315,30 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:gravity="center"
+                android:alignmentMode="alignMargins"
+                android:rowCount="1">
                 <Button
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="2"
                     android:layout_below="@+id/textTitle"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
                     android:id="@+id/btnNavFrag1"
                     android:background="@drawable/border_style"
                     android:text="OP-BMR"/>
                 <Button
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
                     android:layout_marginLeft="20dp"
                     android:layout_below="@+id/btnNavFrag1"
                     android:layout_centerHorizontal="true"
                     android:background="@drawable/border_style"
-                    android:layout_marginTop="10dp"
                     android:id="@+id/btnNavFrag2"
                     android:text="Assessment"/>
 
@@ -330,7 +346,11 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:gravity="center"
+                android:alignmentMode="alignMargins"
+                android:rowCount="1"
                 android:layout_marginTop="80dp">
                 <Button
                     android:layout_width="150dp"

@@ -32,15 +32,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Out_Patientbmr extends Fragment{
-
-    Button button;
-    TextView addpatienttext;
+    TextView testView;
 
     private final String JSON_URL = "https://gist.githubusercontent.com/aws1994/f583d54e5af8e56173492d3f60dd5ebf/raw/c7796ba51d5a0d37fc756cf0fd14e54434c547bc/anime.json" ;
     private JsonArrayRequest request ;
     private RequestQueue requestQueue ;
     private List<Anime> lstAnime ;
     private RecyclerView recyclerView ;
+
 
 
     public Out_Patientbmr() {
@@ -56,21 +55,22 @@ public class Out_Patientbmr extends Fragment{
 
 
 
+        testView=(TextView)v.findViewById(R.id.AddPatient);
+        testView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getActivity(), AddPatients.class);
+                startActivity(intent);
+            }
+        });
+
+
+
         lstAnime = new ArrayList<>() ;
         recyclerView = v.findViewById(R.id.recyclerviewid);
         jsonrequest();
 
         //json//
-        TextView addpatienttext = (TextView) v.findViewById(R.id.AddPatient);
-        addpatienttext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.e("Onclick", "Onclick");
-                Intent intent = new Intent(getContext(), AddPatients.class);
-                startActivity(intent);
-            }
-        });
-
         return v;
     }
 

@@ -21,6 +21,22 @@
                 android:layout_height="800dp"
                 tools:context=".OpBmrFolder.OpBmr1">
 
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Basic Details"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPurple"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.469"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.018" />
+
 
                 <EditText
                     android:id="@+id/editText11"
@@ -147,9 +163,11 @@
                     android:id="@+id/radioButton4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="128dp"
                     android:text="Review  SOS"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <Button
                     android:id="@+id/button9"
@@ -173,22 +191,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/radioButton4"
                     app:layout_constraintVertical_bias="0.757" />
 
-                <TextView
-                    android:id="@+id/textView16"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Basic Details"
-                    android:textAllCaps="true"
-                    android:textColor="@color/colorPurple"
-                    android:textSize="16sp"
 
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.469"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.018" />
 
                 <TextView
                     android:id="@+id/textView17"

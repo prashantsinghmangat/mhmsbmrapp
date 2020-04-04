@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.OpAssessement.Fragment2;
 import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.OpBmrTab.Fragment1;
@@ -36,8 +37,8 @@ public class Animeactivity extends AppCompatActivity {
         setContentView(R.layout.animeactivitytest);
 
 
+        // hide the default actionbar
 
-    // hide the default actionbar
 
         // Recieve data
 
@@ -65,8 +66,8 @@ public class Animeactivity extends AppCompatActivity {
 
         tv_name.setText(name);
         tv_categorie.setText(category);
-//        tv_description.setText(description);
-//        tv_rating.setText(rating);
+        tv_description.setText(description);
+        tv_rating.setText(rating);
         tv_studio.setText(studio);
 
         collapsingToolbarLayout.setTitle(name);

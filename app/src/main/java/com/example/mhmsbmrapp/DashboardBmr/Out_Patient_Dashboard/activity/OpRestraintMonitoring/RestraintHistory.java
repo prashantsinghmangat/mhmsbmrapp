@@ -17,8 +17,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.adapter.RecyclerViewAdapter;
-import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.model.Anime;
+import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.OpRestraintMonitoring.adapter.RecyclerViewAdapterOpRestraint;
+import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.OpRestraintMonitoring.model.AnimeOpRestraint;
+
 import com.example.mhmsbmrapp.R;
 
 import org.json.JSONArray;
@@ -37,7 +38,7 @@ public class RestraintHistory extends Fragment {
     private final String JSON_URL = "https://gist.githubusercontent.com/aws1994/f583d54e5af8e56173492d3f60dd5ebf/raw/c7796ba51d5a0d37fc756cf0fd14e54434c547bc/anime.json" ;
     private JsonArrayRequest request ;
     private RequestQueue requestQueue ;
-    private List<Anime> lstAnime ;
+    private List<AnimeOpRestraint> lstAnimeOpRestraint ;
     private RecyclerView recyclerView ;
 
     public RestraintHistory() {
@@ -52,7 +53,7 @@ public class RestraintHistory extends Fragment {
 
 
 
-        lstAnime = new ArrayList<>() ;
+        lstAnimeOpRestraint = new ArrayList<>() ;
         recyclerView = v.findViewById(R.id.recyclerviewid);
         jsonrequest();
 
@@ -74,7 +75,7 @@ public class RestraintHistory extends Fragment {
 
                     try {
                         jsonObject = response.getJSONObject(i) ;
-                        Anime anime = new Anime() ;
+                        AnimeOpRestraint anime = new AnimeOpRestraint() ;
                         anime.setName(jsonObject.getString("name"));
                         anime.setDescription(jsonObject.getString("description"));
                         anime.setRating(jsonObject.getString("Rating"));
@@ -82,7 +83,7 @@ public class RestraintHistory extends Fragment {
                         anime.setNb_episode(jsonObject.getInt("episode"));
                         anime.setStudio(jsonObject.getString("studio"));
                         anime.setImage_url(jsonObject.getString("img"));
-                        lstAnime.add(anime);
+                        lstAnimeOpRestraint.add(anime);
 
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -91,7 +92,7 @@ public class RestraintHistory extends Fragment {
 
                 }
 
-                setuprecyclerview(lstAnime);
+                setuprecyclerview(lstAnimeOpRestraint);
 
             }
         }, new Response.ErrorListener() {
@@ -108,10 +109,10 @@ public class RestraintHistory extends Fragment {
 
     }
 
-    private void setuprecyclerview(List<Anime> lstAnime) {
+    private void setuprecyclerview(List<AnimeOpRestraint> lstAnime) {
 
 
-        RecyclerViewAdapter myadapter = new RecyclerViewAdapter(getActivity(),lstAnime) ;
+        RecyclerViewAdapterOpRestraint myadapter = new RecyclerViewAdapterOpRestraint(getActivity(),lstAnime) ;
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(myadapter);
 

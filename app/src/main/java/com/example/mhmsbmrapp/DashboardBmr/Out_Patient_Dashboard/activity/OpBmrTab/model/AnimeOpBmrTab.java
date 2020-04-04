@@ -1,6 +1,6 @@
-package com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.OpTherapy.model;
+package com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.OpBmrTab.model;
 
-public class Anime {
+public class AnimeOpBmrTab {
 
     private String name ;
     private String Description;
@@ -10,10 +10,10 @@ public class Anime {
     private String studio ;
     private String image_url;
 
-    public Anime() {
+    public AnimeOpBmrTab() {
     }
 
-    public Anime(String name, String description, String rating, int nb_episode, String categorie, String studio, String image_url) {
+    public AnimeOpBmrTab(String name, String description, String rating, int nb_episode, String categorie, String studio, String image_url) {
         this.name = name;
         Description = description;
         this.rating = rating;

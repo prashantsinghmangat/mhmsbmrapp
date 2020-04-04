@@ -14,19 +14,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.request.RequestOptions;
 import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.Animeactivity;
-import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.model.Anime;
+import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.OpBmrTab.model.AnimeOpBmrTab;
 import com.example.mhmsbmrapp.R;
 
 import java.util.List;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
+public class RecyclerViewAdapterOpbmrtab extends RecyclerView.Adapter<RecyclerViewAdapterOpbmrtab.MyViewHolder> {
 
     private Context mContext ;
-    private List<Anime> mData ;
+    private List<AnimeOpBmrTab> mData ;
     RequestOptions option;
 
 
-    public RecyclerViewAdapter(Context mContext, List<Anime> mData) {
+    public RecyclerViewAdapterOpbmrtab(Context mContext, List<AnimeOpBmrTab> mData) {
         this.mContext = mContext;
         this.mData = mData;
 

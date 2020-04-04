@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="120dp"
     android:layout_marginTop="5dp"
     android:padding="8dp"
     android:background="@drawable/border_grey"
@@ -23,16 +23,62 @@
         android:orientation="vertical"
         android:layout_margin="8dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            >
+            <TextView
+                android:textColor="#9C27B0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/anime_name"
+                android:text="Mr. Prashant Singh"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <TextView
+                android:textColor="#090909"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="("
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <TextView
+                android:id="@+id/studio"
+                android:textColor="#9C27B0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="Mr. Prashant Singh"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <TextView
+                android:textColor="#090909"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text=")"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp">
 
         <TextView
             android:textColor="#090909"
+            android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/anime_name"
-            android:text="Mr. Prashant Singh"
             android:textStyle="bold"
-            android:textSize="18sp"/>
-
+            android:text="Dr. Name     "
+            />
         <TextView
             android:textColor="#090909"
             android:layout_marginTop="5dp"
@@ -40,6 +86,11 @@
             android:layout_height="wrap_content"
             android:text="Category"
             android:id="@+id/categorie"/>
+
+        </LinearLayout>
+
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="25dp">
@@ -103,26 +154,6 @@
             android:drawableLeft="@drawable/ic_star_black_24dp"
             android:paddingRight="5dp"/>
             -->
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:background="@color/colorDoctorName"
-            >
-            <TextView
-                android:textColor="#090909"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Studio"
-                android:layout_marginTop="5dp"
-                android:id="@+id/studio"/>
-
-        </LinearLayout>
-
-
-
-
-
     </LinearLayout>
 
 

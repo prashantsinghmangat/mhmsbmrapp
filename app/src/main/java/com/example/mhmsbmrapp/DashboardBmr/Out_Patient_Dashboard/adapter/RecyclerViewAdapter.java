@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.Animeactivity;
 import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.model.Anime;
@@ -34,9 +35,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         option = new RequestOptions().centerCrop().placeholder(R.drawable.loading_shape).error(R.drawable.loading_shape);
 
     }
-    @NonNull
+
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
         View view ;
         LayoutInflater inflater = LayoutInflater.from(mContext);
         view = inflater.inflate(R.layout.op_patientbmr_list,parent,false) ;
@@ -52,7 +54,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 i.putExtra("anime_category",mData.get(viewHolder.getAdapterPosition()).getCategorie());
                 i.putExtra("anime_nb_episode",mData.get(viewHolder.getAdapterPosition()).getNb_episode());
                 i.putExtra("anime_rating",mData.get(viewHolder.getAdapterPosition()).getRating());
-                i.putExtra("anime_img",mData.get(viewHolder.getAdapterPosition()).getImage_url());
+                //i.putExtra("anime_img",mData.get(viewHolder.getAdapterPosition()).getImage_url());
 
                 mContext.startActivity(i);
 
@@ -66,10 +68,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(MyViewHolder holder, int position) {
 
         holder.tv_name.setText(mData.get(position).getName());
-        //holder.tv_rating.setText(mData.get(position).getRating());
+        holder.tv_rating.setText(mData.get(position).getRating());
         holder.tv_studio.setText(mData.get(position).getStudio());
         holder.tv_category.setText(mData.get(position).getCategorie());
 
@@ -81,34 +83,39 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     }
 
-
     @Override
     public int getItemCount() {
         return mData.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView tv_name ;
         TextView tv_rating ;
         TextView tv_studio ;
         TextView tv_category;
-        ImageView img_thumbnail;
+        //ImageView img_thumbnail;
         LinearLayout view_container;
 
-        public MyViewHolder(@NonNull View itemView) {
+
+
+
+
+        public MyViewHolder(View itemView) {
             super(itemView);
 
             view_container = itemView.findViewById(R.id.container);
             tv_name = itemView.findViewById(R.id.anime_name);
             tv_category = itemView.findViewById(R.id.categorie);
-            //tv_rating = itemView.findViewById(R.id.rating);//
+            tv_rating = itemView.findViewById(R.id.rating);
             tv_studio = itemView.findViewById(R.id.studio);
-           // img_thumbnail = itemView.findViewById(R.id.thumbnail);
+            //img_thumbnail = itemView.findViewById(R.id.thumbnail);
 
         }
     }
+
 }
+
 
 
 
