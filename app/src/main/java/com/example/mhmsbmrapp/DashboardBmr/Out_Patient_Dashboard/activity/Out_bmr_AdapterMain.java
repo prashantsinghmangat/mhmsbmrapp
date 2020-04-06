@@ -1,24 +1,24 @@
-package com.example.mhmsbmrapp.DashboardBmr.In_Patient_Dashboard;
+package com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import static com.example.mhmsbmrapp.DashboardBmr.In_Patient_Dashboard.In_Patientbmr_TabFragment.int_items;
+import static com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.Out_Patientbmr_TabFragment.int_items;
 
-public class Ip_bmr_AdapterMain extends FragmentPagerAdapter {
+public class Out_bmr_AdapterMain extends FragmentPagerAdapter {
 
     int tabCount1;
 
 
     //Constructor to the class
-    public Ip_bmr_AdapterMain(FragmentManager fm, int tabCount) {
+    public Out_bmr_AdapterMain(FragmentManager fm, int tabCount) {
         super(fm);
         //Initializing tab count
         this.tabCount1 = tabCount;
     }
 
-    public Ip_bmr_AdapterMain(FragmentManager fm) {
+    public Out_bmr_AdapterMain(FragmentManager fm) {
         super(fm);
     }
 
@@ -26,11 +26,9 @@ public class Ip_bmr_AdapterMain extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new Reffered_To_Ip();
+                return new Out_Patientbmr();
             case 1:
-                return new Ip_Admitted();
-            case 2:
-                return new Ip_Discharged();
+                return new Out_Completed_list();
 
         }
         return null;
@@ -47,11 +45,9 @@ public class Ip_bmr_AdapterMain extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position){
         switch (position){
             case 0:
-                return "Ip Reffered";
+                return "Queued Out";
             case 1:
-                return "Ip Admitted";
-            case 2:
-                return "Ip Discharged";
+                return "Completed Out";
 
 
         }

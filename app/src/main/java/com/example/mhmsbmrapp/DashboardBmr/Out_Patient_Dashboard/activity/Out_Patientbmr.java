@@ -19,7 +19,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.mhmsbmrapp.AddPatientFolder.AddPatients;
+
 import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.adapter.RecyclerViewAdapter;
 import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.model.Anime;
 import com.example.mhmsbmrapp.R;
@@ -32,7 +32,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Out_Patientbmr extends Fragment{
-    TextView testView;
+
 
     private final String JSON_URL = "https://gist.githubusercontent.com/aws1994/f583d54e5af8e56173492d3f60dd5ebf/raw/c7796ba51d5a0d37fc756cf0fd14e54434c547bc/anime.json" ;
     private JsonArrayRequest request ;
@@ -51,19 +51,7 @@ public class Out_Patientbmr extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.op_patientbmr_fragment, container, false);
-
-
-
-        testView=(TextView)v.findViewById(R.id.AddPatient);
-        testView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(getActivity(), AddPatients.class);
-                startActivity(intent);
-            }
-        });
-
+        View v = inflater.inflate(R.layout.op_bmr_queued_list, container, false);
 
 
         lstAnime = new ArrayList<>() ;

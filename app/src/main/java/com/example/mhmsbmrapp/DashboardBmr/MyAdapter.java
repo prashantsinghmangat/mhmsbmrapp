@@ -4,13 +4,12 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-
-import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.Out_Patientbmr;
-import com.example.mhmsbmrapp.DashboardBmr.In_Patient_Dashboard.In_Patientbmr;
+import com.example.mhmsbmrapp.DashboardBmr.In_Patient_Dashboard.In_Patientbmr_TabFragment;
+import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.Out_Patientbmr_TabFragment;
 
 import static com.example.mhmsbmrapp.DashboardBmr.TabFragment.int_items;
 
-public class    MyAdapter extends FragmentPagerAdapter {
+public class MyAdapter extends FragmentPagerAdapter {
 
     public MyAdapter(FragmentManager fm)
     {
@@ -20,9 +19,9 @@ public class    MyAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position){
             case 0:
-                return new Out_Patientbmr();
+                return new Out_Patientbmr_TabFragment();
             case 1:
-                return new In_Patientbmr();
+                return new In_Patientbmr_TabFragment();
 
 
 

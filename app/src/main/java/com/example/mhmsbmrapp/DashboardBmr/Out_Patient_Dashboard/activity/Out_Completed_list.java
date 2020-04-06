@@ -1,4 +1,4 @@
-package com.example.mhmsbmrapp.DashboardBmr.In_Patient_Dashboard;
+package com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.mhmsbmrapp.R;
 
-public class Ip_Admitted extends Fragment {
+public class Out_Completed_list extends Fragment {
 
     @Nullable
     @Override

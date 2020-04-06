@@ -4,18 +4,18 @@
     android:orientation="vertical"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".DashboardBmr.In_Patient_Dashboard.In_Patientbmr">
+    tools:context=".DashboardBmr.In_Patient_Dashboard.In_Patientbmr_TabFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/Ip_bmr_tabs"
         app:tabGravity="fill"
+        android:background="@drawable/tab_layout_background"
         app:tabMode="fixed"
-        android:background="#FAF7F7"
-        app:tabIndicatorColor="#813D7E"
-        app:tabSelectedTextColor="#813D7E"
-        app:tabTextColor="#333232"
+        android:layout_marginTop="10dp"
+        app:tabBackground="@drawable/tab_layout_selector"
+        app:tabSelectedTextColor="#FFFFFF"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </com.google.android.material.tabs.TabLayout>

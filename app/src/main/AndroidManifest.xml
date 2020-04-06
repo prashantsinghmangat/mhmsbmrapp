@@ -24,9 +24,9 @@
         <activity android:name=".DashboardBmr.SentFragment" />
         <activity android:name=".Login.SelectMhe" />
         <activity android:name=".Login.LoginBmr" />
-        <activity android:name=".Login.SplashScreen" />
+        <activity android:name=".DashboardBmr.MainActivity"/>
 
-        <activity android:name=".DashboardBmr.MainActivity">
+        <activity android:name=".Login.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

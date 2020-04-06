@@ -2,30 +2,23 @@ package com.example.mhmsbmrapp.DashboardBmr.In_Patient_Dashboard;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.mhmsbmrapp.DashboardBmr.Out_Patient_Dashboard.activity.OpAssessement.AssessementAdapter;
 import com.example.mhmsbmrapp.R;
 import com.google.android.material.tabs.TabLayout;
 
-import java.util.ArrayList;
-
-
-public class In_Patientbmr extends Fragment {
+public class In_Patientbmr_TabFragment extends Fragment {
     public  static TabLayout tabLayout1;
     public  static ViewPager viewPager1;
     public  static int int_items= 3;
 
 
-    public In_Patientbmr() {
+    public In_Patientbmr_TabFragment() {
     }
 
     @Nullable

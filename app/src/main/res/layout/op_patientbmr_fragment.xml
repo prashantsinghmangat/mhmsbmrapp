@@ -84,16 +84,26 @@
             android:textStyle="bold"></TextView>
 
     </LinearLayout>
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerviewid"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/Op_bmr_tabs"
+        app:tabGravity="fill"
+        android:background="@drawable/tab_layout_background"
+        app:tabMode="fixed"
+        android:layout_marginTop="120dp"
+        app:tabBackground="@drawable/tab_layout_selector"
+        app:tabSelectedTextColor="#FFFFFF"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="110dp"
-        android:layout_marginRight="16dp">
-    </androidx.recyclerview.widget.RecyclerView>
+        android:layout_height="wrap_content">
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/opviewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="180dp">
+
+    </androidx.viewpager.widget.ViewPager>
+
 
 
 </RelativeLayout>
