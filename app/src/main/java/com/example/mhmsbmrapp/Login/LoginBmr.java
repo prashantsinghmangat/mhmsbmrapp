@@ -38,6 +38,7 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import okhttp3.FormBody;
@@ -52,54 +53,84 @@ import com.example.mhmsbmrapp.R;
 public class LoginBmr extends AppCompatActivity {
 
 
-    TextView testView;
     private EditText Name;
     private EditText Password;
     private TextView Info;
     private Button Login;
+    private ImageView image;
     private int counter = 5;
+    OkHttpClient client = new OkHttpClient();
 
+    /*private final String GlobalVariables = "http://13.126.27.50/MHMS_DEV/user/";
+    private final String GlobalVariablesRest = "http://13.126.27.50/MHMS_DEV/rest/";
+    private final String CORS = "http://13.126.27.50";*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_bmr);
 
-        Name = (EditText) findViewById(R.id.etName);
-        Password = (EditText) findViewById(R.id.etPassword);
-        Info = (TextView) findViewById(R.id.tvInfo);
-        Login = (Button) findViewById(R.id.btnLogin);
+        Name = (EditText)findViewById(R.id.etName);
+        Password = (EditText)findViewById(R.id.etPassword);
+        Info = (TextView)findViewById(R.id.tvInfo);
+        Login = (Button)findViewById(R.id.btnLogin);
 
-        Info.setText("5");
+        Info.setText("No of attempts remaining: 5");
 
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validate(Name.getText().toString(), Password.getText().toString());
-                Log.d("login credientals pass", "login credientals pass");
+                System.out.println("inside on click listener");
+
+                Runnable runnable = new Runnable() {
+                    @Override
+                    public void run() {
+
+                        MHPFlow mhpFlow = new MHPFlow();
+                        String information = null;
+                        final String userName = ((EditText) findViewById(R.id.etName)).getText().toString();
+                        final String password = ((EditText) findViewById(R.id.etPassword)).getText().toString();
+                        System.out.println(userName+"     --------------------------     " +password);
+
+                        String jwtToken = mhpFlow.login(userName, password);
+
+
+                        try {
+                            Log.e("try","inside LoginBmr try----------------------------------");
+                            Log.e("JWT Token", jwtToken);
+                            JSONObject jsonObjectbject = new JSONObject(jwtToken);
+                            String token = jsonObjectbject.getString("token");
+                            Log.e("Token", token);
+                            JSONObject result = new JSONObject(MHPFlow.decoded(jwtToken));
+                            Log.e("decoded String (result)", result.toString());
+                            Log.e("getAssociatedOrg()",mhpFlow.getAssociatedOrg(token, result.getString("sessionToken")).toString());
+                            JSONArray jsonArray = mhpFlow.getAssociatedOrg(token, result.getString("sessionToken"));
+                            //System.out.println(jsonArray.getJSONObject(jsonArray.length()-1));
+                            int cnt = 0;
+                            ArrayList<String> list = new ArrayList<String>();
+                            list.add("MHE/OP*");
+                            while(cnt < jsonArray.length()){
+                                JSONObject mheObject = jsonArray.getJSONObject(cnt);
+                                list.add(mheObject.getString("name"));
+                                cnt++;
+                            }
+                            Log.e("MHE list", list.toString());
+                            Log.e("try", "outside LoginBmr try----------------------------------");
+                            Intent intent = new Intent(LoginBmr.this, SelectMhe.class);
+                            intent.putExtra("list", list);
+                            LoginBmr.this.startActivity(intent);
+                        }catch(Exception e){
+                            e.printStackTrace();
+                        }
+
+
+                    }
+
+                };
+                new Thread(runnable).start();
             }
         });
     }
 
-    private void validate(String userName, String userPassword) {
-        if ((userName.equals("p")) && (userPassword.equals("1"))) {
-            Intent intent = new Intent(LoginBmr.this, SelectMhe.class);
-            startActivity(intent);
-            Log.d("login pass", "login  pass");
-        } else {
-            counter--;
-
-            Info.setText("" + String.valueOf(counter));
-            Log.d("login not pass", "login  not pass");
-
-            if (counter == 0) {
-                Login.setEnabled(false);
-                Log.d("login false pass", "login false  pass");
-            }
-        }
-    }
-
-
-
-}
+} //Login ends
 
