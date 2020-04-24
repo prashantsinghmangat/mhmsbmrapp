@@ -22,16 +22,6 @@ public class AssessementMain extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable final Bundle savedInstanceState) {
         View view  = inflater.inflate(R.layout.opassessementmain, container, false);
 
-        Button addpatienttext = (Button) view.findViewById(R.id.button10);
-        addpatienttext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.e("Onclick", "Onclick");
-                Intent intent = new Intent(getContext(), AddPatients.class);
-                startActivity(intent);
-            }
-        });
-
         return view;
     }
 }

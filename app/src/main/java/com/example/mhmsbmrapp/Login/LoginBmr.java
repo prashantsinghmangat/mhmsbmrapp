@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import android.graphics.Bitmap;
@@ -52,7 +53,8 @@ import com.example.mhmsbmrapp.R;
 
 public class LoginBmr extends AppCompatActivity {
 
-
+    //for loader circle
+    private ProgressBar spinner;
     private EditText Name;
     private EditText Password;
     private TextView Info;
@@ -74,12 +76,18 @@ public class LoginBmr extends AppCompatActivity {
         Password = (EditText)findViewById(R.id.etPassword);
         Info = (TextView)findViewById(R.id.tvInfo);
         Login = (Button)findViewById(R.id.btnLogin);
+        //for loader circle
+        spinner=(ProgressBar)findViewById(R.id.progressBar);
+        spinner.setVisibility(View.GONE);
 
         Info.setText("No of attempts remaining: 5");
 
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //for loader circle
+                spinner.setVisibility(View.VISIBLE);
+
                 System.out.println("inside on click listener");
 
                 Runnable runnable = new Runnable() {

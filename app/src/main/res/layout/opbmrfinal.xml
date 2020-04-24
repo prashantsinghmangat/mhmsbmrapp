@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddPatientFolder.AddPatients">
+    >
 
     <ScrollView
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@
                     android:id="@+id/textView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Patient Registration"
+                    android:text="Clinical Profile"
                     android:textColor="#813D7E"
                     android:textSize="18dp"
                     android:textFontWeight="600"
@@ -37,47 +37,17 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:textSize="12dp"
-                    android:layout_marginLeft="16dp"
-                    android:text="Note: Enter Details according to Patient ID Proof. *indicates mandatory fields."
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-                <TextView
                     android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:textColor="#565656"
                     android:textSize="16dp"
-                    android:text="Identity Validation"
+                    android:text="Chief Complaints"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.011"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-                <RadioButton
-                    android:id="@+id/radioButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ID Proof"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-                <RadioButton
-                    android:id="@+id/radioButton2"
-                    android:layout_width="74dp"
-                    android:layout_height="33dp"
-                    android:layout_marginTop="28dp"
-                    android:text="None"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.126"
-                    app:layout_constraintStart_toEndOf="@+id/radioButton"
-                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
                 <EditText
                     android:id="@+id/Identity_Proof"
@@ -92,7 +62,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.4"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/radioButton" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
                 <EditText
                     android:id="@+id/Enter_ID_Number"
@@ -102,186 +72,70 @@
                     android:ems="10"
                     android:paddingLeft="17dp"
                     android:inputType="textPersonName"
-                    android:hint="Enter ID Number"
+                    android:hint="Duration"
                     android:background="@drawable/border_style"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.4"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/Identity_Proof" />
 
-                <Button
-                    android:id="@+id/button6"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/Notetext"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:textColor="#FBFBFB"
+                    android:textColor="#0B0B0B"
                     android:padding="10dp"
-                    android:background="@drawable/button_rounded"
-                    android:text="Get Details"
+                    android:text="Note : Please Click on add button after entering data"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.498"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/Enter_ID_Number" />
 
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Basic Details"
-                    android:layout_marginTop="8dp"
-                    android:textColor="#565656"
-                    android:textSize="16dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.01"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/button6" />
-
                 <EditText
                     android:id="@+id/Salutation"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="100dp"
                     android:layout_marginTop="8dp"
                     android:ems="10"
                     android:paddingLeft="17dp"
                     android:inputType="textPersonName"
-                    android:hint="Salutation"
+                    android:hint="History of Mental Status Examination"
                     android:background="@drawable/border_style"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.018"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                    app:layout_constraintTop_toBottomOf="@+id/Notetext" />
 
-                <LinearLayout
-                    android:id="@+id/firstlastname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:alignmentMode="alignMargins"
-                    android:layout_marginTop="8dp"
-                    android:columnCount="2"
-                    android:rowCount="1"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/Salutation">
-
-                    <EditText
-                        android:id="@+id/First_Name"
-                        android:layout_width="150dp"
-                        android:layout_height="50dp"
-                        android:layout_rowWeight="1"
-                        android:layout_columnWeight="2"
-                        android:layout_centerHorizontal="true"
-                        android:layout_weight="1"
-                        android:ems="10"
-                        android:paddingLeft="17dp"
-                        android:hint="First Name"
-                        android:background="@drawable/border_style"
-                        android:inputType="textPersonName"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/Salutation" />
-
-                    <EditText
-                        android:id="@+id/Last_Name"
-                        android:layout_width="150dp"
-                        android:layout_height="50dp"
-                        android:layout_rowWeight="1"
-                        android:layout_columnWeight="2"
-                        android:layout_centerHorizontal="true"
-                        android:layout_weight="1"
-                        android:inputType="textPersonName"
-                        android:hint="Last Name"
-                        android:paddingLeft="17dp"
-                        android:background="@drawable/border_style"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="1.0"
-                        app:layout_constraintStart_toEndOf="@+id/First_Name"
-                        app:layout_constraintTop_toBottomOf="@+id/Salutation" />
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:id="@+id/linearLayout2"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:alignmentMode="alignMargins"
-                    android:columnCount="2"
-                    android:rowCount="1"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/firstlastname">
-
-                    <EditText
-                        android:id="@+id/Date_of_Birth"
-                        android:layout_width="150dp"
-                        android:layout_height="50dp"
-                        android:paddingLeft="17dp"
-                        android:layout_rowWeight="1"
-                        android:layout_columnWeight="2"
-                        android:layout_centerHorizontal="true"
-                        android:layout_weight="1"
-                        android:ems="10"
-                        android:background="@drawable/border_style"
-                        android:inputType="textPersonName"
-                        android:hint="Date of Birth"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/Salutation" />
-
-                    <EditText
-                        android:id="@+id/Gender"
-                        android:layout_width="150dp"
-                        android:layout_height="50dp"
-                        android:paddingLeft="17dp"
-                        android:layout_rowWeight="1"
-                        android:layout_columnWeight="2"
-                        android:layout_centerHorizontal="true"
-                        android:layout_weight="1"
-                        android:inputType="textPersonName"
-                        android:hint="Gender"
-                        android:background="@drawable/border_style"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="1.0"
-                        app:layout_constraintStart_toEndOf="@+id/First_Name"
-                        app:layout_constraintTop_toBottomOf="@+id/Salutation" />
-                </LinearLayout>
 
                 <EditText
                     android:id="@+id/Salutation_father"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="100dp"
                     android:ems="10"
                     android:layout_marginTop="8dp"
                     android:inputType="textPersonName"
-                    android:hint="Salutation"
+                    android:hint="Illness Summery"
                     android:paddingLeft="17dp"
                     android:background="@drawable/border_style"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+                    app:layout_constraintTop_toBottomOf="@+id/Salutation" />
 
-                <EditText
-                    android:id="@+id/Father_Name"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:ems="10"
-                    android:paddingLeft="17dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/border_style"
-                    android:inputType="textPersonName"
-                    android:hint="Father’s/Mother’s Name *"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/Salutation_father" />
+
 
                 <TextView
                     android:id="@+id/textView6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Permanent Address"
+                    android:text="Diagnosis"
+                    android:textColor="#813D7E"
+                    android:textSize="16dp"
                     android:layout_marginTop="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/Father_Name" />
+                    app:layout_constraintTop_toBottomOf="@+id/Salutation_father" />
 
                 <EditText
                     android:id="@+id/Address_1"
@@ -435,57 +289,20 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-                <LinearLayout
-                    android:id="@+id/linearLayout7"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:alignmentMode="alignMargins"
-                    android:columnCount="2"
-                    android:layout_marginTop="8dp"
-                    android:rowCount="1"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/Email">
-
                 <EditText
                     android:id="@+id/Mobile_number"
-                    android:layout_width="150dp"
+                    android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="2"
-                    android:layout_centerHorizontal="true"
-                    android:layout_weight="1"
-                    android:layout_marginRight="8dp"
                     android:ems="10"
                     android:paddingLeft="17dp"
                     android:background="@drawable/border_style"
+                    android:layout_marginTop="8dp"
                     android:inputType="textPersonName"
                     android:hint="Mobile Number"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-                    <Button
-                        android:id="@+id/button2"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:layout_rowWeight="1"
-                        android:layout_columnWeight="2"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginLeft="8dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/button_rounded"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:onClick="sendOTP"
-                        android:padding="10dp"
-                        android:text="Send OTP"
-                        android:textColor="#FBFBFB"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/Salutation" />
-
-
-                </LinearLayout>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Email" />
 
                 <LinearLayout
                     android:id="@+id/linearLayout5"
@@ -497,47 +314,44 @@
                     android:rowCount="1"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+                    app:layout_constraintTop_toBottomOf="@+id/Mobile_number">
 
-
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:onClick="sendOTP"
+                        android:textColor="#FBFBFB"
+                        android:padding="10dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/button_rounded"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="Send OTP"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/Salutation" />
 
                     <EditText
                         android:id="@+id/editText19"
                         android:layout_width="150dp"
                         android:layout_height="50dp"
-                        android:layout_rowWeight="1"
-                        android:layout_columnWeight="2"
-                        android:layout_centerHorizontal="true"
-                        android:layout_weight="1"
-                        android:layout_marginRight="8dp"
-                        android:ems="10"
                         android:paddingLeft="17dp"
-                        android:background="@drawable/border_style"
-                        android:inputType="textPersonName"
-                        android:hint="OTP"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="1.0"
-                        app:layout_constraintStart_toEndOf="@+id/First_Name"
-                        app:layout_constraintTop_toBottomOf="@+id/Salutation" />
-                    <Button
-                        android:id="@+id/button5"
-                        android:layout_width="80dp"
-                        android:layout_height="50dp"
-                        android:onClick="verifyOTP"
                         android:layout_rowWeight="1"
                         android:layout_columnWeight="2"
                         android:layout_centerHorizontal="true"
                         android:layout_weight="1"
                         android:layout_marginLeft="8dp"
                         android:inputType="textPersonName"
-                        android:text="Verify OTP"
-                        android:textColor="#FBFBFB"
-                        android:padding="10dp"
-                        android:background="@drawable/button_rounded"
+                        android:hint="OTP"
+                        android:background="@drawable/border_style"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="1.0"
-
-                        />
+                        app:layout_constraintStart_toEndOf="@+id/First_Name"
+                        app:layout_constraintTop_toBottomOf="@+id/Salutation" />
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/linearLayout6"
@@ -570,7 +384,25 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/Salutation" />
 
-
+                    <Button
+                        android:id="@+id/button5"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:onClick="verifyOTP"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="8dp"
+                        android:inputType="textPersonName"
+                        android:text="Verify OTP"
+                        android:textColor="#FBFBFB"
+                        android:padding="10dp"
+                        android:background="@drawable/button_rounded"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/First_Name"
+                        app:layout_constraintTop_toBottomOf="@+id/Salutation" />
                 </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>

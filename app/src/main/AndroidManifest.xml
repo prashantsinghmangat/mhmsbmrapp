@@ -20,6 +20,7 @@
         android:largeHeap="true"
         android:roundIcon="@mipmap/karnatakalogo"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
         <activity android:name=".DashboardBmr.Out_Patient_Dashboard.activity.nextactivity" />

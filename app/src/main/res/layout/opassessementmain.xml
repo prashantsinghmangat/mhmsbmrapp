@@ -10,263 +10,399 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="800dp"
-                tools:context=".OpBmrFolder.OpBmr1">
+                android:layout_height="wrap_content"
+                >
+
 
                 <TextView
-                    android:id="@+id/textView16"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Basic Details"
-                    android:textAllCaps="true"
-                    android:textColor="@color/colorPurple"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="Clinical Profile"
+                    android:textColor="#813D7E"
+                    android:textSize="18dp"
+                    android:textFontWeight="600"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.469"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.018" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#565656"
+                    android:textSize="16dp"
+                    android:text="Chief Complaints"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.011"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
                 <EditText
-                    android:id="@+id/editText11"
-                    android:layout_width="137dp"
-                    android:layout_height="38dp"
+                    android:id="@+id/Identity_Proof"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="12dp"
                     android:ems="10"
-                    android:hint="Education"
+                    android:paddingLeft="17dp"
                     android:inputType="textPersonName"
-                    android:textSize="12sp"
-
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="@drawable/border_style"
+                    android:hint="Identity Proof"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.175"
+                    app:layout_constraintHorizontal_bias="0.4"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.069" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
                 <EditText
-                    android:id="@+id/editText12"
-                    android:layout_width="137dp"
-                    android:layout_height="38dp"
+                    android:id="@+id/Enter_ID_Number"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
                     android:ems="10"
-                    android:hint="Occupation"
+                    android:paddingLeft="17dp"
                     android:inputType="textPersonName"
-                    android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:hint="Duration"
+                    android:background="@drawable/border_style"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.791"
+                    app:layout_constraintHorizontal_bias="0.4"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.07" />
+                    app:layout_constraintTop_toBottomOf="@+id/Identity_Proof" />
+
+                <TextView
+                    android:id="@+id/Notetext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#0B0B0B"
+                    android:padding="10dp"
+                    android:text="Note : Please Click on add button after entering data"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Enter_ID_Number" />
 
                 <EditText
-                    android:id="@+id/editText13"
-                    android:layout_width="117dp"
-                    android:layout_height="53dp"
+                    android:id="@+id/Salutation"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
                     android:ems="10"
-                    android:hint="Reffer By"
+                    android:paddingLeft="17dp"
                     android:inputType="textPersonName"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:hint="History of Mental Status Examination"
+                    android:background="@drawable/border_style"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.163"
+                    app:layout_constraintHorizontal_bias="0.018"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.234" />
+                    app:layout_constraintTop_toBottomOf="@+id/Notetext" />
+
 
                 <EditText
-                    android:id="@+id/editText14"
-                    android:layout_width="168dp"
+                    android:id="@+id/Salutation_father"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:ems="10"
+                    android:layout_marginTop="8dp"
+                    android:inputType="textPersonName"
+                    android:hint="Illness Summery"
+                    android:paddingLeft="17dp"
+                    android:background="@drawable/border_style"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Salutation" />
+
+
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Diagnosis"
+                    android:textColor="#813D7E"
+                    android:textSize="16dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Salutation_father" />
+
+                <EditText
+                    android:id="@+id/Address_1"
+                    android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:ems="10"
-                    android:hint="Referal Note"
+                    android:paddingLeft="17dp"
+                    android:layout_marginTop="8dp"
                     android:inputType="textPersonName"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:hint="Address 1 *"
+                    android:background="@drawable/border_style"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.835"
+                    app:layout_constraintHorizontal_bias="0.246"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.234" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
                 <EditText
-                    android:id="@+id/editText18"
-                    android:layout_width="152dp"
-                    android:layout_height="38dp"
-                    android:layout_marginStart="28dp"
-                    android:layout_marginLeft="28dp"
+                    android:id="@+id/Address_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
                     android:ems="10"
-                    android:hint="Language Tested In*"
+                    android:paddingLeft="17dp"
+                    android:layout_marginTop="8dp"
                     android:inputType="textPersonName"
-                    android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:hint="Address 2 *"
+                    android:background="@drawable/border_style"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.468" />
+                    app:layout_constraintTop_toBottomOf="@+id/Address_1" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alignmentMode="alignMargins"
+                    android:columnCount="2"
+                    android:layout_marginTop="8dp"
+                    android:rowCount="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Address_2">
+
+                    <EditText
+                        android:id="@+id/City"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="2"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/border_style"
+                        android:layout_weight="1"
+                        android:paddingLeft="17dp"
+                        android:ems="10"
+                        android:layout_marginRight="8dp"
+                        android:inputType="textPersonName"
+                        android:hint="City *"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/Salutation" />
+
+                    <EditText
+                        android:id="@+id/District"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:paddingLeft="17dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_weight="1"
+                        android:inputType="textPersonName"
+                        android:background="@drawable/border_style"
+                        android:hint="District *"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/First_Name"
+                        app:layout_constraintTop_toBottomOf="@+id/Salutation" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alignmentMode="alignMargins"
+                    android:columnCount="2"
+                    android:layout_marginTop="8dp"
+                    android:rowCount="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+                    <EditText
+                        android:id="@+id/State"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_weight="1"
+                        android:layout_marginRight="8dp"
+                        android:ems="10"
+                        android:paddingLeft="17dp"
+                        android:background="@drawable/border_style"
+                        android:inputType="textPersonName"
+                        android:hint="State *"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/Salutation" />
+
+                    <EditText
+                        android:id="@+id/Pincode"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="8dp"
+                        android:inputType="textPersonName"
+                        android:hint="Pincode *"
+                        android:paddingLeft="17dp"
+                        android:background="@drawable/border_style"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/First_Name"
+                        app:layout_constraintTop_toBottomOf="@+id/Salutation" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Contact Details and Patient Consent to Keep Medical Records"
+                    android:textColor="#565656"
+                    android:layout_marginTop="8dp"
+                    android:textSize="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
                 <EditText
-                    android:id="@+id/editText2"
-                    android:layout_width="162dp"
-                    android:layout_height="37dp"
-                    android:layout_marginStart="216dp"
-                    android:layout_marginLeft="216dp"
+                    android:id="@+id/Email"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
                     android:ems="10"
-                    android:hint="Background Information"
+                    android:paddingLeft="17dp"
+                    android:background="@drawable/border_style"
                     android:inputType="textPersonName"
-                    android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="8dp"
+                    android:hint="Email"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.467" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
                 <EditText
-                    android:id="@+id/editText3"
-                    android:layout_width="162dp"
-                    android:layout_height="37dp"
-                    android:layout_marginStart="216dp"
-                    android:layout_marginLeft="216dp"
+                    android:id="@+id/Mobile_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
                     android:ems="10"
-                    android:hint="Informant Relationship"
+                    android:paddingLeft="17dp"
+                    android:background="@drawable/border_style"
+                    android:layout_marginTop="8dp"
                     android:inputType="textPersonName"
-                    android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:hint="Mobile Number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.546" />
+                    app:layout_constraintTop_toBottomOf="@+id/Email" />
 
-                <EditText
-                    android:id="@+id/editText4"
-                    android:layout_width="162dp"
-                    android:layout_height="37dp"
-                    android:layout_marginStart="28dp"
-                    android:layout_marginLeft="28dp"
-                    android:ems="10"
-                    android:hint="Informant"
-                    android:inputType="textPersonName"
-                    android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.546" />
-
-                <RadioButton
-                    android:id="@+id/radioButton4"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="128dp"
-                    android:text="Review  SOS"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-                <Button
-                    android:id="@+id/button9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Dashboard"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.257"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-                <Button
-                    android:id="@+id/button10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Submit"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.334"
-                    app:layout_constraintStart_toEndOf="@+id/button9"
-                    app:layout_constraintTop_toBottomOf="@+id/radioButton4"
-                    app:layout_constraintVertical_bias="0.757" />
-
-
-
-                <TextView
-                    android:id="@+id/textView17"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Referral Details"
-                    android:textAllCaps="true"
-                    android:textColor="@color/colorPurple"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.503"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.163" />
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Assessment Details"
-                    android:textAllCaps="true"
-                    android:textColor="@color/colorPurple"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.526"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.399" />
-
-                <TextView
-                    android:id="@+id/textView18"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Treatment Plan"
-                    android:textAllCaps="true"
-                    android:textColor="@color/colorPurple"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.492"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.607" />
-
-                <TextView
-                    android:id="@+id/textView19"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Follow Up Recommendations"
-                    android:textAllCaps="true"
-                    android:textColor="@color/colorPurple"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.497"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.768" />
-
-                <Spinner
-                    android:id="@+id/spinner"
-                    android:layout_width="325dp"
-                    android:layout_height="41dp"
-                    android:spinnerMode="dropdown"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:alignmentMode="alignMargins"
+                    android:columnCount="2"
+                    android:layout_marginTop="8dp"
+                    android:rowCount="1"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.32" />
+                    app:layout_constraintTop_toBottomOf="@+id/Mobile_number">
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:onClick="sendOTP"
+                        android:textColor="#FBFBFB"
+                        android:padding="10dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/button_rounded"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="Send OTP"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/Salutation" />
+
+                    <EditText
+                        android:id="@+id/editText19"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:paddingLeft="17dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="8dp"
+                        android:inputType="textPersonName"
+                        android:hint="OTP"
+                        android:background="@drawable/border_style"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/First_Name"
+                        app:layout_constraintTop_toBottomOf="@+id/Salutation" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearLayout6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alignmentMode="alignMargins"
+                    android:columnCount="2"
+                    android:layout_marginTop="8dp"
+                    android:rowCount="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+                    <Button
+                        android:id="@+id/button3"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:onClick="createPatient"
+                        android:layout_rowWeight="1"
+                        android:layout_marginRight="8dp"
+                        android:layout_columnWeight="2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:textColor="#FBFBFB"
+                        android:padding="10dp"
+                        android:background="@drawable/button_rounded"
+                        android:inputType="textPersonName"
+                        android:text="Submit"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/Salutation" />
+
+                    <Button
+                        android:id="@+id/button5"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:onClick="verifyOTP"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="8dp"
+                        android:inputType="textPersonName"
+                        android:text="Verify OTP"
+                        android:textColor="#FBFBFB"
+                        android:padding="10dp"
+                        android:background="@drawable/button_rounded"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/First_Name"
+                        app:layout_constraintTop_toBottomOf="@+id/Salutation" />
+                </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
